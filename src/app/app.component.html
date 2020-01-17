@@ -1,0 +1,45 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <img src="assets/images/02583765-b093-4b3f-86fd-8feb79929572_200x200.png" height="80" width="160" style="margin-top: 7% ; margin-bottom: 5%;">
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/help'"> Help </a>
+      <a mat-button [routerLink]="'/create-account'"> Create Account </a>
+      <a mat-button [routerLink]="'/registry'"> Registry </a>
+      <a mat-button [routerLink]="'/gift'"> Gift cards </a>
+      <a mat-button [routerLink]="'/sell'"> Sell </a>
+      <a mat-button [routerLink]="'/recomendation'"> Your GoShopping.com </a>
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+      <span style="font-size: 20px;">Shop Today's Deal</span>
+      <span class="example-spacer"></span>
+      <span><mat-search-bar style="width: 30%;"></mat-search-bar></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav style="width: 30%;">
+    <mat-nav-list>
+      <h3 mat-subheader>Shop By Category</h3>
+      <a mat-list-item [routerLink]="'/computers'"> Computers </a>
+      <a mat-list-item [routerLink]="'/create-account'"> Electronics </a>
+      <a mat-list-item [routerLink]="'/contacts'"> Men's Fashion </a>
+      <a mat-list-item [routerLink]="'/create-contact'"> Women's Fashion </a>
+      <a mat-list-item [routerLink]="'/activities'"> Pet supplies </a>
+      <a mat-list-item [routerLink]="'/create-activity'"> Library </a>
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

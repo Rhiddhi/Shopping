@@ -1,0 +1,42 @@
+
+.image {
+    background-image: url('dims.jpeg');
+    height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+    
+    justify-content: flex-end;
+}
+
+.example-card.mat-card {
+    max-width: 400px;
+    max-height: 80% !important;
+    margin: 5% !important;
+
+  }
+
+  .header-image {
+    height : 30%;
+    width: 40% !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 80%;
+  }
+  
+  .example-header-image {
+    background-image: url('../../assets/images/02583765-b093-4b3f-86fd-8feb79929572_200x200.png');
+    background-size: cover;
+  }
